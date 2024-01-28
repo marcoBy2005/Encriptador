@@ -1,0 +1,209 @@
+/* Diseño para móviles */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,body {
+    overflow-x: hidden;
+}
+
+/* Diseño de los elementos del bloque */
+.bloque{
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.bloque img{
+    width: 10vh;
+    margin: 10px 20px;
+}
+
+.bloque input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.9em;
+    padding-left: 70px;
+}
+
+.bloque i{
+    color: gray
+}
+
+/* Diseño seccion-1(Logo e input) */
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+/* Diseño seccion-2(info y botones) */
+
+.seccion-2 {
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.info {
+    display: flex;
+    gap: 5px
+}
+
+
+.diseño-botones {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 208px;
+    height: 40px;
+    transition: all ease-out 0.5s;
+}
+
+.diseño-botones:hover {
+    background-color: rgb(43, 43, 175);
+    color: white;
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+/* Diseño mitad2 (espacio donde se muestra el resultado y el botón copiar) */
+
+.fondo {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    height: 60vh;
+}
+
+.fondo p{
+    height: 50%;
+    margin: 0;
+    padding: 70px;
+    font-size: 1.5em
+}
+
+.boton-copiar{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 50%;
+}
+
+/* Diseño para escritorio con mediquerys (mitad1 y mitad2 comprenden el espacio tanto donde se encripta como se desencripta, respectivamente */
+
+@media (max-width:281px) {
+    .bloque input{
+        padding-left: 100px;
+    }
+}
+
+@media (max-width:767px){
+    .mitad2{
+        background-color: rgb(236, 236, 236);
+    }
+    .contenedor-botones{
+        gap: 10px;
+    }
+
+    .fondo {
+        margin: 10px;
+    }
+}
+
+
+@media (min-width:768px){
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .bloque{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .bloque img{
+        height: 6vh;
+    }
+
+    .fondo {
+        height: 98vh;
+        margin: 10px 10px 10px 0px;
+    }
+
+    .fondo p{
+        padding: 50px;
+        height: 50%;
+        margin: 0;
+    }
+
+    .mitad2{
+        width: 120vw;
+    }
+
+    .mitad1{
+        width:120vw;
+    }
+
+    .seccion-1{
+        height: 50%;
+    }
+
+    .seccion-2{
+        height: 50%;
+        display: flex;
+        align-items: end;
+        margin: 0;
+    }
+
+    .contenedor-botones {
+        display: flex;
+        justify-content: space-between;
+        gap:10px;
+        padding: 10px
+    }
+
+    .info-botones{
+        width: 100%;
+    }
+
+    .bloque input {
+        font-size: 2em;
+    }
+
+}
+
+@media (min-width:900px) {
+    .mitad2{
+        width: 35%;
+    }
+
+    .mitad1{
+        width:65%;
+    }
+
+    .diseño-botones {
+        width: 400px;
+    }
+
+    .contenedor-botones {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .bloque input {
+        font-size: 3em;
+    }
+}
+
