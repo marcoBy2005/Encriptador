@@ -87,7 +87,6 @@ function pressDesencriptar() {
   }
 }
 
-window.addEventListener(unirseAlEncriptador)
 
 
 
